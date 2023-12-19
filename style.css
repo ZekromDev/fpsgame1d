@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height : 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.gameInfo {
+    display : flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.container {
+    height: 400px;
+    width: 500px;
+    border : 2px solid black;
+    cursor: crosshair;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#target {
+    position : absolute;
+    height: 75px;
+    width: 50px;
+    transition: 0.25s;
+    animation : animationTarget 10s infinite;
+}
+
+button {
+    padding : 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes animationTarget {
+    to {
+        transform: translateY(-200px) rotate(90deg);
+    }
+}
